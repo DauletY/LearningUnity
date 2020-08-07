@@ -1,0 +1,4 @@
+unity3d awsome 
+//You want to know where you can save files that your game generates, like screenshots and saved games.
+
+// Use the Application.persistentDataPath property to get the location of a folder that you can save data to.
