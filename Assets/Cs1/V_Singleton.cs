@@ -6,18 +6,20 @@ using UnityEngine;
 public class V_Singleton<T> : MonoBehaviour where T: MonoBehaviour {
     // The instance. This property only has a getter, which means 
     // that other parts of the code won't be able to modify it. 
-    public static T instance 
-    { 
+    public static T instance
+    {
         get
-         {
+        {
 
-    // If we don't have an instance ready, get one by 
-    // either finding it in the scene, or creating one 
-            if (_instance == null) {
-                    _instance = FindOrCreateInstance();
-                } 
-                return _instance; }
-             }
+            // If we don't have an instance ready, get one by 
+            // either finding it in the scene, or creating one 
+            if (_instance == null)
+            {
+                _instance = FindOrCreateInstance();
+            }
+            return _instance;
+        }
+    }
              // This variable stores the actual instance. It's private, and 
              // can only be accessed through the 'instance' property above.
               private static T _instance;
